@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="angular.js"></script>
+</head>
+<body>
+    <h1>Angular JS</h1>
+  <div ng-app="MyApp">
+      <div ng-controller="HeaderController">
+          <h1> Xin chào các bạn đã đến với {{data.name}} </h1>
+          <h2 ng-bind="data.age"></h2>
+          <br />
+          <input value="" ng-model="dt.name1" />
+          <span ng-bind="dt.name1"></span>
+          <button ng-click="Save()">Save</button>
+
+
+      </div>
+
+
+  </div>
+
+
+</body>
+<script>
+    angular.module("MyApp", []).controller("HeaderController", function ($scope) {
+        $scope.data = {
+            name: "Anhbt",
+            age : "24"
+        }
+        $scope.Save = function () {
+            console.log($scope.dt.name1);
+
+        }
+
+
+
+
+
+
+    })
+
+
+
+</script>
+</html>
